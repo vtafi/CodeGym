@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <style>
+    .bg-aqua{
+      border: 5px solid lightblue; /* Màu viền xanh nhạt */
+      padding: 10px;               /* Khoảng cách từ viền đến nội dung */
+      width: 300px;                /* Chiều rộng của form */
+      background-color: white;     /* Nền trắng cho form */
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+<div class="bg-aqua">
+<table style="background-color: yellow" >
+  <tr>
+  <th colspan="4" style="background-color: aqua" >Đăng ký học viên</th>
+  </tr>
+  <tr>
+    <th>Họ và Tên</th>
+    <td>
+      <input type="text">
+    </td>
+  </tr>
+  <tr>
+    <th>Ngày Sinh</th>
+    <td>
+      <input type="datetime-local">
+    </td>
+  </tr>
+  <tr>
+    <th>Giới Tính</th>
+    <td>
+      <input type="checkbox">
+      <label for="">Nam</label>
+      <input type="checkbox">
+      <label for="">Nữ</label>
+    </td>
+  </tr>
+  <tr>
+    <th>Địa Chỉ</th>
+    <td>
+      <input type="text">
+    </td>
+  </tr>
+  <tr>
+    <th>Lớp</th>
+    <td>
+      <select>
+        <option>-Chọn Lớp-</option>
+        <option>12D2</option>
+        <option>12D2</option>
+        <option>12D2</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td>
+      <input placeholder="example@gmail.com" type="email">
+    </td>
+  </tr>
+  <tr>
+    <th>Điện thoại</th>
+    <td>
+      <input type="number" >
+    </td>
+  </tr>
+  <th></th>
+  <td>
+    <button type="submit" >Đăng ký</button>
+  </td>
+  <td>
+    <button type="reset" >Nhập lại</button>
+  </td>
+</table>
+</div>
+</body>
+</html>
