@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<form>
+  <input type="number" placeholder="Diem Hoc Vien"
+  id="d">
+  <button type="submit" onclick="diemHocVien()">Submit</button>
+</form>
+<script>
+  function diemHocVien(){
+   let d = document.getElementById("d").value;
+ if (d >=75){
+   alert("pass module")
+ }else {
+   alert("fail module")
+ }
+  }
+</script>
