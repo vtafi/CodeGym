@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<button onclick="bai1()" >Bài 1: Kiểm tra xem a có chia hết cho b hay không </button>
+<button onclick="bai2()" >Bài 2: Kiểm tra đủ tuổi để học lớp 10 hay không</button>
+<button onclick="bai3()" >Bài 3: Kiểm tra xem số có lớn hơn 0 hay không </button>
+<button onclick="bai4()" >Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất</button>
+<button onclick="bai5()" >Bài 5</button>
+<button onclick="bai6()" >Bài 6</button>
+
+<script>
+  function bai1(){
+    let a = +prompt("Nhap a")
+    let b = +prompt("Nhap b")
+    if (a % b == 0){
+      alert("A chia het cho B")
+    } else {
+      alert("A khong chia het cho b")
+      }
+  }
+  function bai2(){
+    let a =  +prompt("Nhap vao so tuoi hien tai")
+    if (a == 15){
+      alert("Ban da du tuoi de vao hoc lop 10")
+    }else if (a>15){
+       let b = a - 15
+      alert("Ban da qua " + b + " tuoi de hoc lop 10" )
+    }else alert("Ban chua du tuoi hoc lop 10")
+  }
+  function bai3(){
+    let a = +prompt("Nhập vào số để kiểm tra có lớn hơn 0 hay không")
+    if (a > 0){
+      alert("Số vừa nhập lớn hơn 0")
+    }else if (a < 0) {
+      alert("Số vừa nhập bé 0")
+    }else alert("Số vừa nhập = 0")
+  }
+  function bai4(){
+    let a = +prompt("Nhập a")
+    let b = +prompt("Nhập b")
+    let c = +prompt("Nhập c")
+    if (a < c && b < c){
+      alert("C là số lớn nhất")
+    }if (b < a && c < a){
+      alert("A là số lớn nhất")
+    }else alert("B là số lớn nhất")
+  }
+  function bai5() {
+    let a = +prompt("Nhập điểm bài kiểm tra")
+    let b = +prompt("Nhập vào điểm thi giữa kì")
+    let c = +prompt("Nhập vào điểm cuối kì")
+    if (a > 0 && b > 0 && c > 0) {
+      let tb = ((a + b + c) / 3)
+      if (tb >= 8) {
+        alert("Điểm trung bình của bạn xếp học lực Giỏi")
+      } else if (tb >= 6.5) {
+        alert("Điểm trung bình của bạn xếp học lực Khá")
+      } else alert("Điểm trung bình của bạn xếp học lực Yếu ")
+    }else (alert("Điểm phải lớn hơn 0"))
+  }
+  function bai6(){
+    let a = +prompt("Nhập vào số tiền hoa hồng")
+    if (a > 0 && a < 2000000){
+      let b = 0.02 * a
+      alert("Số tiền hoa hồng là " + b)
+      }else if (a > 2000000 && a < 5000000){
+      let b = 0.05 * a
+      alert("Số tiền hoa hồng là "+ b)
+    }else if (a > 5000000){
+      let b = 0.10 * a
+      alert("Số tiền hoa hồng là "+ b)
+    }else alert("Số tiền phải lớn hơn 0")
+  }
+  function bai7(){
+
+  }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="searchElement()">Search</button>
+<script>
+  function searchElement(){
+    let mang = []
+    let c
+    let a = +prompt(`Nhập vào số lượn điểm các quan chức `)
+    for (let i = 0; i < a; i++){
+      c = prompt(`Nhập vào điểm thứ ${i}`)
+      mang.push(c)
+    }
+    let max =
+    for (let i = 0; i < mang.length; i++){
+      if(max<mang[i]){
+        max = i
+      }
+    }
+    console.log(max)
+  }
+</script>
+</body>
+</html>

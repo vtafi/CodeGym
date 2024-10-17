@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="ball" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" style = "width: 30%">
+<p>Click to move right</p>
+<input type="button" value="Click" onclick="moveRight()">
+</body>
+<script>
+  let obj = null;
+  obj = document.getElementById('ball')
+  function init(){
+    obj = document.getElementById('ball')
+    obj.style.position = 'relative'
+    obj.style.top = '0px'
+  }
+  function moveRight(){
+    obj.style.top = parseInt(obj.style.top) + 10 + 'px'
+  }
+  window.onload = init()
+</script>
+</html>

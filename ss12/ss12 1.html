@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr = []
+  let input
+  while (true){
+    input = prompt("Vui lòng nhập")
+    if (input.toLocaleLowerCase()=== 'done'){
+      break
+    }else{
+      if(isNaN(input)){
+        alert("Giáo sư nhập sai")
+        continue
+      }
+      arr.push(+input);
+    }
+  }
+  document.write(arr)
+  let arr2 = [1,1.1,0.9];
+  arr2.sort(function (a, b){
+    return a - b;
+  })
+  document.write(arr2)
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button onclick="bai1()">Bài 1</button>
+<button onclick="bai2()">Bài 2</button>
+<button onclick="bai3()">Bài 3</button>
+<button onclick="bai4()">Bài 4</button>
+<button onclick="bai5()">Bài 5</button>
+<button onclick="bai6()">Bài 6</button>
+<button onclick="bai7()">Bài 7</button>
+<button>Bài 8</button>
+<script>
+  function bai1(){
+    for (let i = 0 ; i < 100 ; i++){
+      document.write(i+"\n")
+    }
+    document.writeln("Đã hoàn thành in 99 số")
+  }
+  function bai2(){
+    let a = +prompt("Nhập vào nhiệt độ")
+    if (a>=100) {
+      while (a >= 100) {
+        a = +prompt("Giảm nhiệt độ")
+      }
+        alert("Giảm nhiệt độ thành công")
+    }else if (a<=20) {
+      while (a <= 20) {
+        a = +prompt("Tăng nhiệt độ")
+      }
+        alert("Tăng nhiệt độ thành công")
+    }
+  }
+  function bai3(){
+    let n1 = 0, n2 = 1, n3
+    document.write(n1+"\n")
+    document.write(n2+"\n")
+    for (let i = 3; i <= 20; i++) {
+      n3 = n1 + n2;
+      document.write(n3+"\n")
+      n1 = n2
+      n2 = n3
+    }
+  }
+  function bai4(){
+    let n1 = 0, n2 = 1, n3
+    for (let i = 3; i <= 20; i++) {
+      n3 = n1 + n2;
+      n1 = n2
+      n2 = n3
+        if (n3 % 5 == 0) {
+          alert(`số ${n3} là số fibonacci đầu tiền chia hết cho 5`)
+          break
+        }
+    }
+  }
+  function bai5(){
+    let n1 = 0, n2 = 1, n3,sum = n1 + n2
+    for (let i = 3; i <= 20; i++) {
+      n3 = n1 + n2;
+      n1 = n2
+      n2 = n3
+      sum +=n3
+    }document.write(sum)
+  }
+  function bai6(){
+    let count = 0
+    let sum = 0
+    let num = 0
+    while (count<30){
+      if(num % 7=== 0){
+        sum+=num
+        count++
+      }num++
+    }
+    document.write(sum)
+  }
+  function bai7(){
+    for (let i = 1; i <= 100;i++){
+      if (i % 3 === 0 && i % 5 ===0){
+        document.write("FizzBuzz\n")
+      }else if (i % 3 === 0){
+        document.write("Fizz\n")
+      }else if (i % 5 === 0){
+        document.write("Buzz\n")
+      } else {
+        document.write(i+"\n")
+      }
+    }
+  }
+  function bai8() {
+    
+  }
+</script>
+
+</body>
+</html>

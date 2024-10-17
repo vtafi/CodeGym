@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="kiemTraSoHoanHao()">1</button>
+<script>
+    function uoc(){
+        let a = +prompt("Nhập a")
+    }for (let i = 1; i <= a;i++){
+        if (a%i === 0){
+            console.log(i)
+        }
+    }
+
+    //template string
+
+    function kiemTraSoHoanHao() {
+        let a = +prompt("Nhập a")
+        let b = 0
+        while (isNaN(a) || a <= 0){
+            a = prompt("Bạn nhập không phải số hoặc là 1 số âm")
+        }
+        for (let i = 1; i <= a/2;i++) {
+            if (a % i === 0){
+                 b+=i
+            }
+        }if (b === a){
+            alert(`${a} là số hoàn hảo`)
+        }else alert(`${a}  không phải là số hoàn hảo`)
+
+    }
+</script>
+</body>
+</html>

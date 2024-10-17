@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="bai1()">Bài 1</button>
+<button onclick="bai2()">Bài 2</button>
+<button onclick="bai3()">Bài 3</button>
+<button onclick="bai4()">Bài 4</button>
+<button onclick="bai5()">Bài 5</button>
+<button onclick="bai6()">Bài 6</button>
+<button onclick="bai7()">Bài 7</button>
+<button onclick="bai8()">Bài 8</button>
+<button onclick="bai9()">Bài 9</button>
+<button onclick="bai10()">Bài 10</button>
+<button>Bài 11</button>
+<button>Bài 12</button>
+<script>
+  //Bài 1: Chuyển từ độ C sang độ F.
+  function bai1(){
+    let a = prompt("Nhập vào độ C bạn muốn đổi")
+    while (isNaN(a) || a === '') {
+       a=prompt("Vui lòng nhập lại")
+    }
+    let b
+    b = a * 9/5 + 32
+    alert(`${a} độ C -> ${b} độ F`)
+  }
+  //Bài 2: Chuyển từ mét sang feet:
+  function bai2() {
+    let a = prompt("Nhập vào số mét muốn đổi")
+    while (isNaN(a) || a === '') {
+      a = prompt("Vui lòng nhập lại")
+    }
+    let b = a * 3.2808
+    alert(`${a} mét -> ${b} feet`)
+  }
+    //Bài 3: Tính diện tích hình vuông khi biết cạnh a.
+    function bai3 (){
+      let a = prompt("Nhập vào độ dài 1 cạnh vuông")
+      while (isNaN(a)||a < 0 || a === ''){
+        a=prompt("Vui lòng nhập lại")
+      }
+      let b = a * a
+      alert(`Diện tích hình vuông là ${b}`)
+    }
+  //Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.
+    function bai4(){
+      let a = prompt("Nhập cạnh a")
+      while (isNaN(a) ||  a<0 || a === '') {
+        a = prompt("Vui lòng nhập lại cạnh a")
+      }
+      let b = prompt("Nhập cạnh b")
+      while (isNaN(b) || b < 0 || b === ''){
+        b = prompt("Vui lòng nhập lại cạnh b")
+      }
+      let c = a * b
+      alert(`Diện tích hình chữ nhật là ${c}`)
+    }
+  //Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.
+    function bai5(){
+      let a = prompt("Nhập cạnh a")
+      while (isNaN(a) ||  a<0 || a === '') {
+        a = prompt("Vui lòng nhập lại cạnh a")
+      }
+      let b = prompt("Nhập cạnh b")
+      while (isNaN(b) || b < 0 || b === ''){
+        b = prompt("Vui lòng nhập lại cạnh b")
+      }
+      let c = 1/2*a*b
+      alert(`Diện tích tam giác vuông là ${c}`)
+    }
+  //Bài 6: Giải phương trình bậc 1.
+    function bai6(){
+      alert("Phương trình 1 ẩn ax+b=0")
+      let a = +prompt("Nhập a")
+      let b = +prompt("Nhập b")
+      if (a == 0 && b != 0){
+        alert("Phương trình vô nghiệm")
+      }else if (a == 0 && b == 0){
+        alert("Nghiệm đúng với mọi X")
+      }else if (a != 0){
+        let x = -b/a
+        alert(`Phương trình có nghiệm x = ${x}`)
+      }
+    }
+    //Bài 7: Giải phương trình bậc 2.
+  function bai7(){
+    alert("Phương trình bậc 2 có dạng :  a^2 + bx +c = 0 ")
+    let a = +prompt("Nhập a")
+    while (a === 0) {
+      a = prompt("Nhập lại a")
+    }
+    let b = +prompt("Nhập b")
+    while (isNaN(b)){
+      b=prompt("Nhập lại b")
+    }
+    let c = +prompt("Nhập c")
+    while (isNaN(c)){
+      c=prompt("Nhập lại")
+    }
+    let denta = b^2 - 4*a*c
+    if (denta < 0){
+      alert("Phương trình vô nghiệm")
+    }else if (denta === 0){
+      let x = -b/2*a
+      alert(`Phương trình có nghiệm kép : ${x}`)
+    }else{
+      let x1 = (-b+Math.sqrt(denta))/ 2*a
+      let x2 = (-b-Math.sqrt(denta))/ 2*a
+      alert(`Phương trình có 2 nghiệm phân biệt x1 = ${x1}
+                                                x2 = ${x2}`)
+    }
+  }
+  //Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không.
+  // Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.
+  function bai8(){
+    let a = prompt("Nhập vào kiểm tra có phải số tuổi của 1 người không")
+    while (isNaN(a)){
+      a = prompt("Vui lòng nhập vào số")
+    }if (a>120 || a<=0){
+      alert("Tuổi j lạ thế")
+    }else {
+      alert(`${a} là số tuổi của 1 người`)
+    }
+  }
+  //Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.
+  // Điều kiện để a,b,c là cạnh của một tam giác là:
+  // a,b,c > 0
+  // a + b > c
+  // b + c > a
+  // a + c > b
+  function bai9() {
+      let a = prompt("Nhập vào cạnh a của 1 tam giác")
+      while (isNaN(a) || a < 0 || a === '') {
+          a = prompt("Nhập lại cạnh a")
+      }
+      let b = prompt("Nhập vào cạnh b của 1 tam giác")
+      while (isNaN(b) || b < 0 || b === '') {
+          b = prompt("Nhập lại cạnh b")
+      }
+      let c = prompt("Nhập vào cạnh c của 1 tam giác")
+      while (isNaN(c) || c < 0 || c === '') {
+          c = prompt("Nhập lại cạnh c")
+      }
+      if (a + b > c) {
+          alert("Là 1 tam giác")
+      } else if (b + c > a) {
+          alert("là 1 tam giác")
+      } else {
+          alert("là 1 tam giác")
+      }
+  }
+  function bai10 (){
+      let a = prompt("Nhập số điện tiêu thụ tháng vừa qua")
+      while (isNaN(a) || a <= 0 || a === '' ){
+          a = prompt("Nhập lại.(Số điện phải lớn hơn 0 và là 1 số)")
+      }
+      let tienDien = 0
+      if (a <= 50) {
+          tienDien = a * 1.806
+      } else if (a <= 100) {
+          tienDien = (50 * 1.806) + (a - 50) * 1.866
+      } else if (a <= 200) {
+          tienDien = (50 * 1.806) + (50 * 1.866) + (a - 100) * 2.167
+      } else if (a <= 300) {
+          tienDien = (50 * 1.806) + (50 * 1.866) + (100 * 2.167) + (a - 200) * 2.729
+      } else if (a <= 400) {
+          tienDien = (50 * 1.806) + (50 * 1.866) + (100 * 2.167) + (100 * 2.729) + (a - 300) * 3.050
+      } else {
+          tienDien = (50 * 1.806) + (50 * 1.866) + (100 * 2.167) + (100 * 2.729) + (100 * 3.050) + (a - 400) * 3.151
+      }
+
+      alert(`Tiền điện tháng vừa rồi là: ${tienDien+(tienDien-tienDien*0.8)} đồng`);
+  }
+</script>
+</body>
+</html>

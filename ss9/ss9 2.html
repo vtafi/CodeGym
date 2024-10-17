@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="ta" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png" style="position:absolute;left:100px; top:0;" height="100" width="80">
+</body>
+<script>
+  function upArrow(){
+    let element = document.getElementById("ta")
+    element.style.top = parseInt(element.style.top) - 5 +"px"
+  }
+  function downArrow(){
+    let element = document.getElementById("ta")
+    element.style.top = parseInt(element.style.top) + 5 + "px"
+  }
+  function leftArrow(){
+    let element = document.getElementById("ta")
+    element.style.left = parseInt(element.style.left) - 5 + "px"
+  }
+  function rightArrow(){
+    let element = document.getElementById("ta")
+    element.style.left = parseInt(element.style.left) + 5 + "px"
+  }
+  function moveSelection (evt) {
+      console.log(evt.keyCode)
+      switch (evt.keyCode) {
+          case 37 :
+              leftArrow()
+              break
+          case 38 :
+              upArrow()
+              break
+          case 39 :
+              rightArrow()
+              break
+          case 40 :
+              downArrow()
+              break
+      }
+  }
+    window.addEventListener('keydown',moveSelection)
+</script>
+</html>

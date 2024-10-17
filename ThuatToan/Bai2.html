@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr = [1,2,3,3];
+  let n = +prompt("Nhập vào vị trí")
+  let sum1 = 0;
+  let sum2 = 0;
+  let arr1 =arr.slice(0,n);
+  console.log(arr1);
+  let arr2 =arr.slice(n+1,arr.length);
+  console.log(arr2);
+  for (let i = 0; i < arr1.length; i++) {
+    if (!isNaN(arr1[i])) {
+      sum1 += arr1[i];
+    }
+  }
+  console.log(sum1)
+  for (let i = 0; i < arr2.length; i++) {
+    if (!isNaN(arr2[i])) {
+      sum2 += arr2[i];
+    }
+  }
+  console.log(sum2)
+</script>
+
+</body>
+</html>

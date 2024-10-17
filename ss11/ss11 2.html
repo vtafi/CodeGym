@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let username = ''
+  let pass = ''
+  while (true){
+     let a = prompt("Nhập username")
+    if (a !== 'taitv'){
+      a=prompt("Vui lòng nhập lại")
+      continue
+    }else{
+      break
+    }
+  }
+  while (true) {
+    let c = prompt("Nhập pass")
+    if (c !== '123') {
+      c= prompt("Nhập lại")
+      continue
+    }else{
+      alert("Đăng nhập thành công")
+      break
+    }
+  }
+
+</script>
+
+</body>
+</html>

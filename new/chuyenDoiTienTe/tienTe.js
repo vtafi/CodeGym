@@ -9,9 +9,9 @@ function changMoney(){
     }else if(FromC == "VND" && To == "USD"){
         Result = "Result :" + (Amount/23000) + "$"
     }else if(FromC == "VND" && To == "VND"){
-        Result = "Result :" + Amount + "Đ";
+        Result = "Khong cho doi";
     }else {
-        Result = "Result :" + Amount + "$";
+        Result = "Khong cho doi";
     }
     document.getElementById("Result").innerHTML = Result;
 }

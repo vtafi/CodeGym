@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="bai1()">Bài1</button>
+<button onclick="bai2()">Bài2</button>
+<button onclick="bai3()">Bài3</button>
+<button onclick="bai4()">Bài4</button>
+<button onclick="bai5()">Bài5</button>
+<button onclick="bai6()">Bài6</button>
+<button onclick="bai7()">Bài7</button>
+<button onclick="bai8()">Bài8</button>
+<button onclick="bai9()">Bài9</button>
+<script>
+  function bai1(){
+    let arr = [1,10,15,8,9,20,11,3,4,13]
+    for (let i = 0;i<arr.length;i++){
+      if (arr[i] > 10){
+        document.write(arr[i] + '\n')
+      }
+    }
+  }
+  function bai2(){
+      let arr = [1,10,15,8,9,20,11,3,4,13]
+        for (let i = 0;i<arr.length;i++){
+        if (arr[i] > 10){
+          document.write(arr[i] + `Vị trí ${i} <br>`)
+        }
+      }
+  }
+  function bai3(){
+      let arr = [1,10,15,8,9,20,11,3,4,13]
+      let tb = arr.reduce((a,b) => a + b)
+      document.write(tb/arr.length + '<br>')
+      let max = Math.max(...arr)
+      document.write(max)
+  }
+  function bai4(){
+      let mang = prompt("Nhập số lượng phần tử mảng")
+      let arr = []
+      let val
+      for (let i = 0;i<mang;i++){
+           val = prompt("Nhập vào phần tử thứ " + i)
+          arr.push(val)
+      }
+      arr.reverse()
+      document.write("["+arr+"]")
+  }
+  function bai6(){
+      let mang = +prompt("Nhập vào số lượng phần tử mảng")
+      let arr = []
+      for (let i = 0;i<mang;i++){
+          let val = +prompt("Nhập vào phần tử thứ " + i)
+          arr.push(val)
+      }
+      document.write("["+arr+"]"+'<br>')
+      let V = +prompt("Nhập số muốn tìm trong mảng")
+      let f = false
+      for (i = 0;i<arr.length;i++){
+          if (V === arr[i]){
+              document.write("Phần tử có trong mảng" + '<br>')
+              f = true
+              break;
+          }
+      }
+      if (!f){
+          document.write("không tìm thấy phần tử trong mảng")
+      }
+  }
+  function bai7(){
+      let mang = parseInt(prompt("Nhập số lượng phần tử mảng"))
+      let arr = [];
+      for (let i = 0;i<mang;i++){
+          let val = parseInt(prompt("Nhập phần tử thứ " + i))
+          arr.push(val)
+      }
+      document.write("["+arr+"]"+'<br>')
+      let V = +prompt("Nhập số muốn tìm trong mảng")
+      let index = arr.indexOf(V)
+      if (index !== -1){
+          for (let i = index;i<arr.length-1;i++){
+              arr[i] = arr[i + 1]
+          }
+          arr[arr.length - 1] = 0
+          document.write(V + ` Có trong mảng đã xóa ${V} ra khỏi mảng`+"<br>")
+          document.write(arr+"<br>")
+      }else document.write(`Phần tử ${V} không có trong mảng`)
+  }
+  function bai8(){
+      let arr = [1,10,15,8,9,20,11,3,4,13]
+      let val = arr.sort((a,b) => a - b)
+      document.write("["+arr+"]"+'<br>')
+  }
+  function bai9(){
+      let manga = [1,10,15,8,9,20,11,3,4,13]
+      let mangb = [2,10,20,19,30,22,1,6,7,12]
+      let c = new Array(20)
+      c = manga.concat(mangb)
+      console.log(c)
+  }
+</script>
+
+</body>
+</html>
